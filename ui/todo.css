@@ -1,0 +1,298 @@
+body {
+  font: 62.5% "Segoe", "Segoe UI", Arial, "sans-serif";
+  background-color: #ffffff;
+  margin: auto; }
+
+nav {
+  background-color: #127ad3;
+  height: 4.5vh;
+  padding-top: 0.5%;
+  padding-left: 1%;
+  padding-bottom: 0.5%;
+  padding-right: 1%; }
+  nav .todo {
+    float: left;
+    display: inline-block;
+    padding-top: 0.5%;
+    color: white;
+    font-size: 1rem;
+    width: 33%; }
+  nav .search-box {
+    display: inline-block;
+    width: 33%;
+    background-color: #c7ddf5;
+    border-radius: 0.2rem; }
+    nav .search-box .search-icon {
+      padding-right: 0.5rem;
+      font-size: 1rem;
+      font-weight: lighter !important;
+      color: #127ad3;
+      transform: scale(-1, 1); }
+    nav .search-box .search {
+      width: 80%;
+      height: 100%;
+      outline: none;
+      background-color: #c7ddf5;
+      border: 0px;
+      border-radius: 0.2rem; }
+    nav .search-box ::placeholder {
+      color: #127ad3; }
+
+.content {
+  width: 100%;
+  height: 92vh; }
+  .content .side-navbar {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #f4f4f4;
+    border: 0.5px solid #e5e5e5;
+    -webkit-transition: width 0.5s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s; }
+    .content .side-navbar .side-menu {
+      height: auto;
+      padding-top: 0.5rem;
+      padding-left: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-right: 0.5rem; }
+      .content .side-navbar .side-menu .side-logo {
+        display: inline; }
+        .content .side-navbar .side-menu .side-logo i.icon {
+          font-size: 1rem;
+          color: #5d5d5d; }
+      .content .side-navbar .side-menu .side-menu-text {
+        display: inline;
+        opacity: 1;
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+        color: #5d5d5d; }
+  .content .mid-content {
+    display: inline-block;
+    width: 79.5%;
+    height: 91vh;
+    -webkit-transition: width 0.5s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s; }
+    .content .mid-content .menubar {
+      height: auto;
+      padding-top: 1.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 1rem; }
+      .content .mid-content .menubar .my-list {
+        float: left;
+        color: #127ad3;
+        font-size: 1.2rem;
+        font-weight: bold; }
+      .content .mid-content .menubar .sort {
+        padding-top: 0.2rem;
+        float: right;
+        color: #127ad3;
+        font-size: 0.8rem; }
+    .content .mid-content .todo-list {
+      width: 95%;
+      padding-top: 1.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 1rem;
+      height: auto; }
+      .content .mid-content .todo-list .list {
+        display: none; }
+        .content .mid-content .todo-list .list .write-todo {
+          height: 2rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem; }
+          .content .mid-content .todo-list .list .write-todo i.todo-completed {
+            padding-top: 0.5rem;
+            padding-left: 0.5rem;
+            font-size: 1rem;
+            color: #127ad3; }
+          .content .mid-content .todo-list .list .write-todo .todo-text {
+            display: inline-block;
+            padding-top: 0.7rem;
+            padding-left: 0.5rem;
+            font-size: 0.8rem;
+            color: #5d5d5d; }
+          .content .mid-content .todo-list .list .write-todo i.todo-important {
+            float: right;
+            padding-top: 0.5rem;
+            padding-left: 0.5rem;
+            font-size: 1rem;
+            color: #5d5d5d; }
+      .content .mid-content .todo-list .add-more {
+        height: 2rem;
+        padding-top: 0.5rem;
+        border-bottom: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #e5e5e5; }
+        .content .mid-content .todo-list .add-more i.add-icon {
+          padding-top: 0.5rem;
+          padding-left: 0.5rem;
+          font-size: 1rem;
+          color: #5d5d5d; }
+        .content .mid-content .todo-list .add-more i.todo-complete {
+          display: none;
+          padding-top: 0.5rem;
+          padding-left: 0.5rem;
+          font-size: 1rem;
+          color: #5d5d5d; }
+        .content .mid-content .todo-list .add-more .add-more-text {
+          border: none;
+          display: inline-block;
+          width: 90%;
+          outline: none;
+          padding-left: 1rem;
+          font-size: 0.8rem;
+          color: #5d5d5d; }
+        .content .mid-content .todo-list .add-more .add-button {
+          border: none;
+          float: right;
+          display: none;
+          outline: none;
+          padding-top: 0.5rem;
+          padding-left: 1rem;
+          font-size: 0.8rem;
+          font-weight: bold;
+          color: #5d5d5d; }
+      .content .mid-content .todo-list .to-Do {
+        display: block;
+        height: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #e5e5e5; }
+  .content .right-sidenav {
+    display: none;
+    float: right;
+    width: 25%;
+    height: 91vh;
+    border-left: 1px solid #e5e5e5;
+    background-color: #f4f4f4; }
+    .content .right-sidenav .right-sidenav-content {
+      width: 95%;
+      padding-top: 0.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-bottom: 0.5rem; }
+      .content .right-sidenav .right-sidenav-content .todo-content {
+        width: 95%;
+        height: auto;
+        display: flex;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: white;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.2rem; }
+        .content .right-sidenav .right-sidenav-content .todo-content .todo-content-icon {
+          padding-top: 0.5rem;
+          padding-left: 0.5rem;
+          font-size: 1.2rem;
+          color: #127ad3; }
+        .content .right-sidenav .right-sidenav-content .todo-content .todo-content-text {
+          text-align: left;
+          padding-top: 0.5rem;
+          padding-left: 1rem;
+          font-size: 1rem; }
+        .content .right-sidenav .right-sidenav-content .todo-content .todo-star-icon {
+          padding-top: 0.5rem;
+          padding-left: 0.5rem;
+          font-size: 1.2rem; }
+      .content .right-sidenav .right-sidenav-content .add-to-day {
+        width: 95%;
+        height: auto;
+        display: flex;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: white;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.2rem; }
+        .content .right-sidenav .right-sidenav-content .add-to-day .addtoday-logo {
+          display: inline-block;
+          padding-top: 0.5rem;
+          padding-left: 0.5rem;
+          font-size: 1.2rem;
+          color: #5d5d5d; }
+        .content .right-sidenav .right-sidenav-content .add-to-day .addtoday-text {
+          display: inline-block;
+          padding-top: 0.7rem;
+          padding-left: 1rem;
+          font-size: 0.8rem;
+          color: #5d5d5d; }
+      .content .right-sidenav .right-sidenav-content .right-menubar {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.2rem; }
+        .content .right-sidenav .right-sidenav-content .right-menubar .rightmenu {
+          display: flex;
+          padding-top: 0.5rem; }
+          .content .right-sidenav .right-sidenav-content .right-menubar .rightmenu .rightmenu-logo {
+            display: inline-block;
+            padding-top: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 0.5rem;
+            font-size: 1rem;
+            color: #5d5d5d; }
+          .content .right-sidenav .right-sidenav-content .right-menubar .rightmenu .rightmenu-text {
+            width: 85%;
+            display: inline-block;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 0.8rem;
+            color: #5d5d5d;
+            border-bottom: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #e5e5e5; }
+      .content .right-sidenav .right-sidenav-content .add-note {
+        width: 95%;
+        height: 5rem;
+        display: flex;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: white;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.2rem; }
+        .content .right-sidenav .right-sidenav-content .add-note .add-note-text {
+          padding-top: 1rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-bottom: 1rem;
+          font-size: 0.8rem;
+          color: #5d5d5d; }
+  .content .right-bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    width: 99.5%;
+    height: 3rem;
+    background-color: white;
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-left: none;
+    border-bottom: none; }
+    .content .right-bottom-navbar .switch-icon {
+      width: 6%;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      font-size: 1rem;
+      color: #5d5d5d; }
+    .content .right-bottom-navbar .create-Today {
+      width: 13%;
+      padding-top: 1.2rem;
+      padding-left: 1rem;
+      font-size: 0.7rem;
+      color: #5d5d5d; }
+    .content .right-bottom-navbar .delete-icon {
+      padding-top: 1rem;
+      padding-left: 1rem;
+      font-size: 1rem;
+      color: #5d5d5d; }

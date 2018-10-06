@@ -1,0 +1,351 @@
+$font-stack:"Segoe", "Segoe UI", Arial, "sans-serif";
+$primary-color:#ffffff;
+$font-size:62.5%;
+$nav-bg-color:#127ad3;
+
+body {
+  font:$font-size $font-stack;
+  background-color:$primary-color;
+  margin:auto;
+}
+
+nav {
+  background-color:$nav-bg-color;
+  height:4.5vh;
+  padding-top:0.5%;
+  padding-left:1%;
+  padding-bottom:0.5%;
+  padding-right:1%;
+  .todo {
+     float:left;
+     display:inline-block;
+     padding-top:0.5%;
+     color:white;
+     font-size:1rem;
+     width:33%;
+  }
+  .search-box {
+     display:inline-block;
+     width:33%;
+     background-color:#c7ddf5;
+     border-radius:0.2rem;
+     .search-icon {
+         padding-right:0.5rem;
+         font-size:1rem;
+         font-weight:lighter !important;
+         color:$nav-bg-color;
+         transform: scale(-1,1);
+      }
+     .search {
+         width:80%;
+         height:100%;
+         outline:none;
+         background-color: #c7ddf5;
+         border:0px;
+         border-radius:0.2rem;
+      }
+      ::placeholder {
+         color:$nav-bg-color;
+      }
+  }
+}
+.content {
+  width:100%;
+  height:92vh;
+  .side-navbar{
+     float:left;
+     width:20%;
+     height:100%;
+     background-color:#f4f4f4;
+     border:0.5px solid #e5e5e5;
+     -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+     transition: width 0.5s;
+     .side-menu {
+         height:auto;
+         padding-top:0.5rem;
+         padding-left:0.5rem;
+         padding-bottom:0.5rem;
+         padding-right:0.5rem;
+         .side-logo {
+             display:inline;
+             i.icon {
+               font-size:1rem;
+               color:#5d5d5d;
+             }
+          }
+         .side-menu-text {
+             display:inline;
+             opacity:1;
+             padding-left:0.5rem;
+             font-size:0.8rem;
+             color:#5d5d5d;
+         }
+     }
+  }
+ .mid-content {
+     display: inline-block;
+     width:79.5%;
+     height:91vh;
+     -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+     transition: width 0.5s;
+     .menubar{
+       height:auto;
+       padding-top:1.5rem;
+       padding-left:1.5rem;
+       padding-right:1.5rem;
+       padding-bottom:1rem;
+       .my-list {
+          float:left;
+          color:#127ad3;
+          font-size:1.2rem;
+          font-weight: bold;
+       }
+       .sort {
+          padding-top:0.2rem;
+          float:right;
+          color:#127ad3;
+          font-size:0.8rem;
+       }
+     }
+     .todo-list {
+        width:95%;
+        padding-top:1.5rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        padding-bottom:1rem;
+        height:auto;
+        .list {
+          display:none;
+            .write-todo{
+                height:2rem;
+                padding-top:0.5rem;
+                padding-bottom:0.5rem;
+                i.todo-completed {
+                    padding-top:0.5rem;
+                    padding-left:0.5rem;
+                    font-size:1rem;
+                    color:$nav-bg-color;
+                }
+                .todo-text {
+                    display:inline-block;
+                    padding-top:0.7rem;
+                    padding-left:0.5rem;
+                    font-size:0.8rem;
+                    color:#5d5d5d;
+                }
+                i.todo-important {
+                    float:right;
+                    padding-top:0.5rem;
+                    padding-left:0.5rem;
+                    font-size:1rem;
+                    color:#5d5d5d;
+                }
+             }
+         }
+        .add-more {
+           height:2rem;
+           padding-top:0.5rem;
+           border-bottom:1px;
+           border-bottom-style: solid;
+           border-bottom-color: #e5e5e5;
+           i.add-icon{
+             padding-top:0.5rem;
+             padding-left:0.5rem;
+             font-size:1rem;
+             color:#5d5d5d;
+           }
+           i.todo-complete{
+             display:none;
+             padding-top:0.5rem;
+             padding-left:0.5rem;
+             font-size:1rem;
+             color:#5d5d5d;
+           }
+           .add-more-text {
+             border:none;
+             display:inline-block;
+             width:90%;
+             outline:none;
+             padding-left:1rem;
+             font-size:0.8rem;
+             color:#5d5d5d;
+           }
+           .add-button {
+             border:none;
+             float:right;
+             display:none;
+             outline:none;
+             padding-top:0.5rem;
+             padding-left:1rem;
+             font-size:0.8rem;
+             font-weight:bold;
+             color:#5d5d5d;
+           }
+
+         }
+        .to-Do{
+           display:block;
+           height:2rem;
+           padding-top:0.5rem;
+           padding-bottom:0.5rem;
+           border-bottom:1px;
+           border-bottom-style: solid;
+           border-bottom-color: #e5e5e5;
+         }
+     }
+  }
+  .right-sidenav {
+    display:none;
+    float:right;
+    width:25%;
+    height:91vh;
+    border-left: 1px solid #e5e5e5;
+    background-color:#f4f4f4;
+    .right-sidenav-content {
+      width:95%;
+      padding-top:0.5rem;
+      padding-left:0.5rem;
+      padding-right:0.5rem;
+      padding-bottom:0.5rem;
+      .todo-content {
+          width:95%;
+          height:auto;
+          display:flex;
+          padding-top:0.5rem;
+          padding-left:0.5rem;
+          padding-right:0.5rem;
+          padding-bottom:0.5rem;
+          background-color:white;
+          border: 1px solid #e5e5e5;
+          border-radius:0.2rem;
+          .todo-content-icon {
+             padding-top:0.5rem;
+             padding-left:0.5rem;
+             font-size:1.2rem;
+             color:$nav-bg-color;
+          }
+          .todo-content-text {
+             text-align:left;
+             padding-top:0.5rem;
+             padding-left:1rem;
+             font-size:1rem;
+           }
+           .todo-star-icon{
+             padding-top:0.5rem;
+             padding-left:0.5rem;
+             font-size:1.2rem;
+          }
+      }
+      .add-to-day {
+        width:95%;
+        height:auto;
+        display:flex;
+        padding-top:0.5rem;
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+        padding-bottom:0.5rem;
+        background-color:white;
+        border: 1px solid #e5e5e5;
+        border-radius:0.2rem;
+       .addtoday-logo {
+           display: inline-block;
+           padding-top:0.5rem;
+           padding-left:0.5rem;
+           font-size:1.2rem;
+           color:#5d5d5d;
+        }
+        .addtoday-text {
+           display:inline-block;
+           padding-top:0.7rem;
+           padding-left:1rem;
+           font-size:0.8rem;
+           color:#5d5d5d;
+        }
+     }
+
+     .right-menubar {
+       width:100%;
+       height:auto;
+       background-color:white;
+       border: 1px solid #e5e5e5;
+       border-radius:0.2rem;
+       .rightmenu {
+           display:flex;
+           padding-top:0.5rem;
+
+          .rightmenu-logo {
+             display: inline-block;
+             padding-top:0.5rem;
+             padding-left:1rem;
+             padding-right:1rem;
+             padding-bottom:0.5rem;
+             font-size:1rem;
+             color:#5d5d5d;
+          }
+         .rightmenu-text {
+             width:85%;
+             display:inline-block;
+              padding-top:0.5rem;
+             padding-bottom:0.5rem;
+             font-size:0.8rem;
+             color:#5d5d5d;
+             border-bottom:1px;
+             border-bottom-style: solid;
+             border-bottom-color:#e5e5e5;
+         }
+       }
+      }
+      .add-note {
+        width:95%;
+        height:5rem;
+        display:flex;
+        padding-top:0.5rem;
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+        padding-bottom:0.5rem;
+        background-color:white;
+        border: 1px solid #e5e5e5;
+        border-radius:0.2rem;
+        .add-note-text {
+           padding-top:1rem;
+           padding-left:1rem;
+           padding-right:1rem;
+           padding-bottom:1rem;
+           font-size: 0.8rem;
+           color:#5d5d5d;
+        }
+       }
+     }
+  }
+ .right-bottom-navbar {
+    position:fixed;
+    bottom: 0;
+    width:99.5%;
+    height:3rem;
+    background-color:white;
+    display:flex;
+    border: 1px solid #e5e5e5;
+    border-left:none;
+    border-bottom:none;
+    .switch-icon {
+       width:6%;
+       padding-top:1rem;
+       padding-left:1rem;
+       font-size:1rem;
+       color:#5d5d5d;
+    }
+    .create-Today {
+       width:13%;
+       padding-top:1.2rem;
+       padding-left:1rem;
+       font-size:0.7rem;
+       color:#5d5d5d;
+     }
+    .delete-icon {
+       padding-top:1rem;
+       padding-left:1rem;
+       font-size: 1rem;
+       color:#5d5d5d;
+    }
+  }
+}
