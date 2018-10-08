@@ -1,5 +1,27 @@
+function init() {
+  var allList =[];
+  var myList = {
+      id:null,
+      name:null,
+      listOfToDo:[]
+  };
+  var todo = {
+    isChecked:false,
+    isImportant:false,
+    todo:null
+  }
+}
+
+init();
+
 function getElement(className) {
-    return document.getElementsByClassName(className);
+   return document.getElementsByClassName(className);
+}
+
+function createHTMLElement(elementType , className){
+    var htmlElement = document.createElement(elementType);
+    htmlElement.className=className;
+    return htmlElement;
 }
 
 getElement("side-menu")[0].addEventListener("click" , toggleSideMenu);
@@ -26,19 +48,21 @@ function toggleSideMenu() {
         }
     } }, 300);
 }
+getElement("add-new-list")[0].addEventListener("click" , addNewList);
+function addNewList() {
+   var list=createHTMLElement("div" ,"mylist");
+   var listIcon=createHTMLElemnt("div");
 
-getElement("add-more-text")[0].addEventListener("click" , showAdd);
-function showAdd() {
+}
+
+getElement("add-more-text")[0].addEventListener("click" , showAddBotton);
+function showAddBotton() {
      getElement("add-button")[0].style.display="inline-block";
      getElement("add-icon")[0].style.display="none";
      getElement("todo-complete")[0].style.display="inline-block";
 }
 
-function createHTMLElement(elementType , className){
-    var htmlElement = document.createElement(elementType);
-    htmlElement.className=className;
-    return htmlElement;
-}
+
 
 getElement("add-button")[0].addEventListener("click" , addToDo);
 function addToDo() {
@@ -54,12 +78,61 @@ function addToDo() {
      var toDoText=createHTMLElement("div","todo-text");
      toDoText.innerHTML=toDoData;
      var importantIcon =createHTMLElement("i","fa fa-star-o todo-important");
-     console.log(todo);
      todo.appendChild(completedIcon);
      todo.appendChild(toDoText);
      todo.appendChild(importantIcon);
+     todo.addEventListener("click" ,showRightNav);
+     completedIcon.addEventListener("click" ,checked);
+     importantIcon.addEventListener("click" ,makeImportant);
      getElement("list")[0].appendChild(todo);
      var toDo=getElement("to-Do");
      toDo[0].remove();
-     console.log(toDo);
+}
+
+function checked(event) {
+     var parent = event.target.parentNode;
+     var child = parent.childNodes;
+     var content = child[0];
+     if(content.classList.contains("fa-circle-thin")){
+        console.log("marked as checked");
+        getElement("todo-content-icon")[0].classList.replace("fa-circle-thin", "fa-check-circle");
+        content.classList.replace("fa-circle-thin", "fa-check-circle");
+        child[1].style="text-decoration:line-through;";
+     } else {
+        content.classList.remove("fa-check-circle");
+        content.classList.add("fa-circle-thin");
+        getElement("todo-content-icon")[0].classList.replace("fa-check-circle", "fa-circle-thin");
+        child[1].style="text-decoration:none;";
+     }
+
+}
+
+function showRightNav(event) {
+    var content = event.target.parentNode;
+    var child =content.childNodes;
+    getElement("mid-content")[0].style="width:54.5%;"
+    getElement("right-sidenav")[0].style.display="inline-block";
+    getElement("todo-content-text")[0].innerHTML = child[1].textContent;
+    var content = child[2];
+    if(content.classList.contains("fa-star-o")) {
+       getElement("todo-star-icon")[0].classList.replace( "fa-star","fa-star-o");
+    }
+    content = child[0];
+    if(content.classList.contains("fa-check-circle")) {
+       getElement("todo-completed")[0].classList.replace("fa-circle-thin", "fa-check-circle");
+    }
+ }
+
+function makeImportant(event) {
+  var parent = event.target.parentNode;
+  var child = parent.childNodes;
+  var content = child[2];
+  if(content.classList.contains("fa-star-o")){
+     content.classList.replace("fa-star-o", "fa-star");
+     getElement("todo-star-icon")[0].classList.replace("fa-star-o", "fa-star");
+  } else {
+     content.classList.remove("fa-star");
+     content.classList.add("fa-star-o");
+     getElement("todo-star-icon")[0].classList.replace("fa-star", "fa-star-o");
+  }
 }

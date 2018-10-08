@@ -53,7 +53,7 @@ nav {
     .content .side-navbar .side-menu {
       height: auto;
       padding-top: 0.5rem;
-      padding-left: 0.5rem;
+      padding-left: 0.9rem;
       padding-bottom: 0.5rem;
       padding-right: 0.5rem; }
       .content .side-navbar .side-menu .side-logo {
@@ -67,6 +67,44 @@ nav {
         padding-left: 0.5rem;
         font-size: 0.8rem;
         color: #5d5d5d; }
+    .content .side-navbar .mylist {
+      height: auto;
+      padding-top: 0.5rem;
+      padding-left: 0.9rem;
+      padding-bottom: 0.5rem;
+      padding-right: 0.5rem; }
+      .content .side-navbar .mylist .list-logo {
+        display: inline; }
+        .content .side-navbar .mylist .list-logo i.icon {
+          font-size: 1rem;
+          color: #5d5d5d; }
+      .content .side-navbar .mylist .list-text {
+        display: inline;
+        opacity: 1;
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+        color: #5d5d5d; }
+      .content .side-navbar .mylist .selected {
+        color: #127ad3 !important; }
+    .content .side-navbar .add-new-list {
+      height: auto;
+      padding-top: 0.5rem;
+      padding-left: 0.9rem;
+      padding-bottom: 0.5rem;
+      padding-right: 0.5rem; }
+      .content .side-navbar .add-new-list .add-logo {
+        display: inline; }
+        .content .side-navbar .add-new-list .add-logo i.icon {
+          font-size: 1rem;
+          color: #5d5d5d; }
+      .content .side-navbar .add-new-list .add-new-text {
+        display: inline;
+        opacity: 1;
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+        color: #5d5d5d; }
+      .content .side-navbar .add-new-list .selected {
+        color: #127ad3 !important; }
   .content .mid-content {
     display: inline-block;
     width: 79.5%;
@@ -119,7 +157,7 @@ nav {
             padding-top: 0.5rem;
             padding-left: 0.5rem;
             font-size: 1rem;
-            color: #5d5d5d; }
+            color: #127ad3; }
       .content .mid-content .todo-list .add-more {
         height: 2rem;
         padding-top: 0.5rem;
@@ -179,7 +217,7 @@ nav {
       .content .right-sidenav .right-sidenav-content .todo-content {
         width: 95%;
         height: auto;
-        display: flex;
+        display: inline-block;
         padding-top: 0.5rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -188,19 +226,24 @@ nav {
         border: 1px solid #e5e5e5;
         border-radius: 0.2rem; }
         .content .right-sidenav .right-sidenav-content .todo-content .todo-content-icon {
+          float: left;
           padding-top: 0.5rem;
           padding-left: 0.5rem;
           font-size: 1.2rem;
           color: #127ad3; }
         .content .right-sidenav .right-sidenav-content .todo-content .todo-content-text {
+          width: 75%;
+          display: inline-block;
           text-align: left;
           padding-top: 0.5rem;
           padding-left: 1rem;
           font-size: 1rem; }
         .content .right-sidenav .right-sidenav-content .todo-content .todo-star-icon {
+          float: right;
           padding-top: 0.5rem;
           padding-left: 0.5rem;
-          font-size: 1.2rem; }
+          font-size: 1.2rem;
+          color: #127ad3; }
       .content .right-sidenav .right-sidenav-content .add-to-day {
         width: 95%;
         height: auto;

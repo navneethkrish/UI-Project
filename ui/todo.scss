@@ -63,7 +63,7 @@ nav {
      .side-menu {
          height:auto;
          padding-top:0.5rem;
-         padding-left:0.5rem;
+         padding-left:0.9rem;
          padding-bottom:0.5rem;
          padding-right:0.5rem;
          .side-logo {
@@ -72,13 +72,63 @@ nav {
                font-size:1rem;
                color:#5d5d5d;
              }
-          }
+         }
          .side-menu-text {
              display:inline;
              opacity:1;
              padding-left:0.5rem;
              font-size:0.8rem;
              color:#5d5d5d;
+         }
+     }
+
+     .mylist {
+         height:auto;
+         padding-top:0.5rem;
+         padding-left:0.9rem;
+         padding-bottom:0.5rem;
+         padding-right:0.5rem;
+         .list-logo {
+             display:inline;
+             i.icon {
+               font-size:1rem;
+               color:#5d5d5d;
+             }
+         }
+         .list-text {
+             display:inline;
+             opacity:1;
+             padding-left:0.5rem;
+             font-size:0.8rem;
+             color:#5d5d5d;
+         }
+         .selected{
+            color:$nav-bg-color !important;
+         }
+     }
+
+     .add-new-list {
+         height:auto;
+         padding-top:0.5rem;
+         padding-left:0.9rem;
+         padding-bottom:0.5rem;
+         padding-right:0.5rem;
+         .add-logo {
+             display:inline;
+             i.icon {
+               font-size:1rem;
+               color:#5d5d5d;
+             }
+         }
+         .add-new-text {
+             display:inline;
+             opacity:1;
+             padding-left:0.5rem;
+             font-size:0.8rem;
+             color:#5d5d5d;
+         }
+         .selected{
+            color:$nav-bg-color !important;
          }
      }
   }
@@ -138,7 +188,7 @@ nav {
                     padding-top:0.5rem;
                     padding-left:0.5rem;
                     font-size:1rem;
-                    color:#5d5d5d;
+                    color:$nav-bg-color;
                 }
              }
          }
@@ -210,7 +260,7 @@ nav {
       .todo-content {
           width:95%;
           height:auto;
-          display:flex;
+          display:inline-block;
           padding-top:0.5rem;
           padding-left:0.5rem;
           padding-right:0.5rem;
@@ -219,21 +269,26 @@ nav {
           border: 1px solid #e5e5e5;
           border-radius:0.2rem;
           .todo-content-icon {
+             float:left;
              padding-top:0.5rem;
              padding-left:0.5rem;
              font-size:1.2rem;
              color:$nav-bg-color;
           }
           .todo-content-text {
+             width:75%;
+             display:inline-block;
              text-align:left;
              padding-top:0.5rem;
              padding-left:1rem;
              font-size:1rem;
            }
            .todo-star-icon{
+             float:right;
              padding-top:0.5rem;
              padding-left:0.5rem;
              font-size:1.2rem;
+             color:$nav-bg-color;
           }
       }
       .add-to-day {
