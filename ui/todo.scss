@@ -92,7 +92,6 @@ nav {
             font-size:1rem;
             color:#5d5d5d;
          }
-         
          .list-text {
              display:inline;
              opacity:1;
@@ -142,11 +141,18 @@ nav {
        padding-left:1.5rem;
        padding-right:1.5rem;
        padding-bottom:1rem;
-       .my-list {
-          float:left;
+       .my-list-name {
+          display:inline-block;
           color:#127ad3;
           font-size:1.2rem;
           font-weight: bold;
+          outline:none;
+       }
+       i.menu-list-icon {
+         padding-top:0.3rem;
+         padding-left:1rem;
+         color:#127ad3;
+         font-size:1.2rem;
        }
        .sort {
           padding-top:0.2rem;
@@ -175,6 +181,7 @@ nav {
                     color:$nav-bg-color;
                 }
                 .todo-text {
+                    width:92%;
                     display:inline-block;
                     padding-top:0.7rem;
                     padding-left:0.5rem;
