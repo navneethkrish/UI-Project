@@ -88,13 +88,11 @@ nav {
          padding-left:0.9rem;
          padding-bottom:0.5rem;
          padding-right:0.5rem;
-         .list-logo {
-             display:inline;
-             i.icon {
-               font-size:1rem;
-               color:#5d5d5d;
-             }
+         i.icon {
+            font-size:1rem;
+            color:#5d5d5d;
          }
+         
          .list-text {
              display:inline;
              opacity:1;
@@ -372,6 +370,7 @@ nav {
        }
      }
   }
+
  .right-bottom-navbar {
     position:fixed;
     bottom: 0;

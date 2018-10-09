@@ -38,20 +38,50 @@ function toggleSideMenu() {
              content.style.display = "none";
              getElement("side-navbar")[0].style="width:3%;"
              getElement("mid-content")[0].style="width:96.5%;"
+             getElement("add-new-text")[0].style="display:none";
         }
     }
+
+    var list = getElement("list-text");
+    for(var i=0; i<list.length; i++) {
+        var content = list[i];
+        if (content.style.display === "none") {
+             flag=1;
+        } else {
+             content.style.display = "none";
+        }
+    }
+    
+    //needs code reusability...
     setTimeout(function(){
-       for(var i=0; i<sideMenu.length; i++) {
-        var content = sideMenu[i];
+       for(var i=0; i<list.length; i++) {
+       var content = list[i];
         if(flag==1) {
             content.style.display = "inline";
         }
     } }, 300);
+
+    setTimeout(function(){
+       for(var i=0; i<sideMenu.length; i++) {
+       var content = sideMenu[i];
+        if(flag==1) {
+            content.style.display = "inline";
+            getElement("add-new-text")[0].style="display:inline-block";
+        }
+    } }, 300);
 }
+
+
 getElement("add-new-list")[0].addEventListener("click" , addNewList);
 function addNewList() {
-   var list=createHTMLElement("div" ,"mylist");
-   var listIcon=createHTMLElemnt("div");
+    var list=createHTMLElement("div" ,"mylist");
+    var listIcon=createHTMLElement("i","fa fa-list-ul icon");
+    var listtext=createHTMLElement("div" ,"list-text");
+    list.appendChild(listIcon);
+    listtext.innerHTML="navanee";
+    list.appendChild(listtext);
+    getElement("My-List")[0].appendChild(list);
+
 
 }
 
