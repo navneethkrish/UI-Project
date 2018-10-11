@@ -67,6 +67,8 @@ nav {
         padding-left: 0.5rem;
         font-size: 0.8rem;
         color: #5d5d5d; }
+      .content .side-navbar .side-menu .hide {
+        display: none; }
     .content .side-navbar .mylist {
       height: auto;
       padding-top: 0.5rem;
@@ -81,7 +83,8 @@ nav {
         opacity: 1;
         padding-left: 0.5rem;
         font-size: 0.8rem;
-        color: #5d5d5d; }
+        color: #5d5d5d;
+        word-wrap: break-word; }
       .content .side-navbar .mylist .selected {
         color: #127ad3 !important; }
     .content .side-navbar .add-new-list {
@@ -103,6 +106,10 @@ nav {
         color: #5d5d5d; }
       .content .side-navbar .add-new-list .selected {
         color: #127ad3 !important; }
+      .content .side-navbar .add-new-list .hide {
+        display: none; }
+  .content .wid-3 {
+    width: 3%; }
   .content .mid-content {
     display: inline-block;
     width: 79.5%;
@@ -121,7 +128,8 @@ nav {
         color: #127ad3;
         font-size: 1.2rem;
         font-weight: bold;
-        outline: none; }
+        outline: none;
+        border: none; }
       .content .mid-content .menubar i.menu-list-icon {
         padding-top: 0.3rem;
         padding-left: 1rem;
@@ -156,7 +164,8 @@ nav {
             padding-top: 0.7rem;
             padding-left: 0.5rem;
             font-size: 0.8rem;
-            color: #5d5d5d; }
+            color: #5d5d5d;
+            text-decoration: none; }
           .content .mid-content .todo-list .list .write-todo i.todo-important {
             float: right;
             padding-top: 0.5rem;
@@ -180,6 +189,8 @@ nav {
           padding-left: 0.5rem;
           font-size: 1rem;
           color: #5d5d5d; }
+        .content .mid-content .todo-list .add-more i.show-inline-block {
+          display: inline-block; }
         .content .mid-content .todo-list .add-more .add-more-text {
           border: none;
           display: inline-block;
@@ -198,6 +209,10 @@ nav {
           font-size: 0.8rem;
           font-weight: bold;
           color: #5d5d5d; }
+        .content .mid-content .todo-list .add-more i.hide {
+          display: none; }
+        .content .mid-content .todo-list .add-more .show-inline-block {
+          display: inline-block; }
       .content .mid-content .todo-list .to-Do {
         display: block;
         height: 2rem;
@@ -206,8 +221,15 @@ nav {
         border-bottom: 1px;
         border-bottom-style: solid;
         border-bottom-color: #e5e5e5; }
+  .content .wid-79 {
+    width: 79.5%; }
+  .content .wid-71 {
+    width: 71.5%; }
+  .content .wid-54 {
+    width: 54.5%; }
+  .content .wid-96 {
+    width: 96.5%; }
   .content .right-sidenav {
-    display: none;
     float: right;
     width: 25%;
     height: 91vh;
@@ -242,7 +264,8 @@ nav {
           text-align: left;
           padding-top: 0.5rem;
           padding-left: 1rem;
-          font-size: 1rem; }
+          font-size: 1rem;
+          text-decoration: none; }
         .content .right-sidenav .right-sidenav-content .todo-content .todo-star-icon {
           float: right;
           padding-top: 0.5rem;
@@ -296,9 +319,25 @@ nav {
             padding-bottom: 0.5rem;
             font-size: 0.8rem;
             color: #5d5d5d;
+            border-top: none;
+            border-left: none;
             border-bottom: 1px;
             border-bottom-style: solid;
-            border-bottom-color: #e5e5e5; }
+            border-bottom-color: #e5e5e5;
+            outline: none; }
+          .content .right-sidenav .right-sidenav-content .right-menubar .rightmenu input[type="date"].rightmenu-text {
+            width: 85%;
+            display: none;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 0.8rem;
+            color: #5d5d5d;
+            border-top: none;
+            border-left: none;
+            border-bottom: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #e5e5e5;
+            outline: none; }
       .content .right-sidenav .right-sidenav-content .add-note {
         width: 95%;
         height: 5rem;
@@ -316,7 +355,14 @@ nav {
           padding-right: 1rem;
           padding-bottom: 1rem;
           font-size: 0.8rem;
-          color: #5d5d5d; }
+          color: #5d5d5d;
+          outline: none;
+          border: none;
+          width: 90%; }
+  .content .hide {
+    display: none; }
+  .content .show-inline-block {
+    display: inline-block; }
   .content .right-bottom-navbar {
     position: fixed;
     bottom: 0;
@@ -344,3 +390,15 @@ nav {
       padding-left: 1rem;
       font-size: 1rem;
       color: #5d5d5d; }
+
+.show-inline {
+  display: inline; }
+
+.show-inline-block {
+  display: inline-block; }
+
+.hide {
+  display: none; }
+
+.show-block {
+  display: block; }

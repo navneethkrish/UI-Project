@@ -76,7 +76,8 @@
              <input class="my-list-name">
              <i class="fa fa-ellipsis-h menu-list-icon" aria-hidden="true"></i>
              <div class="sort">
-             <i class="fa fa-exchange fa-rotate-90" aria-hidden="true"></i>&ensp;Sort
+              <i class="fa fa-exchange fa-rotate-90" aria-hidden="true"></i>&ensp;Sort
+              &ensp;&ensp;<i class="fa fa-trash deleteTask" aria-hidden="true"></i>
              </div>
          </div>
          <div class="todo-list">
@@ -110,7 +111,7 @@
              </div>
           </div>
    </div>
-   <div class="right-sidenav">
+   <div class="right-sidenav hide">
       <div class="right-sidenav-content">
         <div class="todo-content">
            <i class="fa fa-circle-thin todo-content-icon" aria-hidden="true"></i>
@@ -142,9 +143,8 @@
              <div class="rightmenu-logo">
             <i class="fa fa-calendar icon" aria-hidden="true"></i>
              </div>
-             <div class="rightmenu-text">
-             Add Due Date
-             </div>
+             <input class="rightmenu-text addDue" type="text" placeholder="Add Due Date">
+             <input class="rightmenu-text datepicker" type="date">
            </div>
            <div class="rightmenu">
              <div class="rightmenu-logo">
@@ -158,9 +158,7 @@
       </div>
       <div class="right-sidenav-content">
          <div class="add-note">
-           <div class="add-note-text">
-             Add Note..
-           </div>
+           <input class="add-note-text" placeholder="Add Note..">
          </div>
       </div>
       <div class="right-bottom-navbar">
